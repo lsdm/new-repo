@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百度前端小薇学院任务5</title>
+<style type="text/css">
+body {
+	background-color:#CCC;
+	//字体
+}
+.header {
+	background-color:#0F0F0F;
+	float:left;
+	width:100%;
+	margin-bottom:20px;
+	//设置下外边距是为了与section进行外边距合并，在两者之间留出20px的间距。
+}
+.header img {
+	width:120px;
+	height:60px;
+	float:left;
+	padding-left:60px;
+}
+.header ul {
+	float:right;
+}
+.header ul li {
+	float:left;
+	width:6em;
+}
+li a:link {
+	color:#FFF;
+}
+li a:visited {
+	color:#666;
+}
+.section {
+	margin: 0 20px;
+	width: 62%;
+	clear: left;
+	float: left;
+	//清除左浮动，在section上方形成了清除区域，使得该div内容区置于header之下。
+}
+.section h3{color:#999;}
+.author {
+	color:#999; 
+	font-size:12px;
+}
+p.p1{
+	text-indent:2em;
+}
+.box1 {
+	background-color:#FFF;
+	padding:20px 20px;
+	margin-bottom:20px;
+}
+.box2 {
+	background-color:#FFF;
+	padding:20px 20px;
+	margin-bottom:20px;
+	clear:right;
+}
+.box2 ul {
+	list-style-type:none;
+}
+.box3 {
+	background-color:#FFF;
+	padding:20px 20px;
+	margin-bottom:20px;
+	float:left;
+}
+.box31 img {
+	width:100px;
+	height:120px;
+	margin:10px;
+}
+.box31 {
+	text-align:center;
+	border:1px dashed #999999;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right:20px;
+	display:inline-block;
+}
+
+.box4 {
+	background-color:#FFF;
+	padding:20px 20px;
+	margin-bottom:20px;
+	clear:left;
+}
+.box5 {
+	background-color:#FFF;
+	padding:20px 20px;
+	margin-bottom:20px;
+	position:relative;
+	width:30%;
+	float:left;
+}
+<!--box5中用relative会保留原来的元素位置，定位元素之间会相互影响覆盖。 -->
+<!--若使用absolute定位，那么元素会从普通文档流中删除，相对非static父元素定位，结果就是乱作一团。 -->
+
+.box51 {
+	position:relative;
+	margin-bottom:20px;
+	margin-top:10px;
+}
+.left1 {
+	position:absolute;
+	right:60%;
+    top:auto;
+}
+.right1 {
+	position:absolute;
+	left:40%;
+	top:auto;
+}	
+.box51 p {
+	padding-left:40%;
+}
+.box52 {
+	position:relative;
+	margin-bottom:20px;
+	margin-top:20px;
+	margin-right:40px;
+}
+.left2 {
+	position:absolute;
+	right:60%;
+    top:auto;
+}
+.right2 {
+	position:absolute;
+	left:40%;
+	top:auto;
+}
+.box52 p {
+	padding-left:40%;
+}
+	
+form {
+	position:relative;
+	height:160px;
+	margin-right:40px;
+}
+.left {
+	position:absolute;
+	right:60%;
+    top:auto;
+}
+.right {
+	position:absolute;
+	left:40%;
+	top:auto;
+}
+#te1 {
+	height:80px;
+	width:50%;
+}
+.box5 h3 {
+	color:#000;
+}
+
+.box5 p {
+	color:gray;
+}
+#sub53 {
+	width:100%;
+	height:40px;
+	background-color:#03F;
+}
+.footer {
+	background-color:#000;
+	color:#FFF;
+	height:60px;
+	clear:left;
+}
+.footer p {
+	padding-top:20px;
+	padding-left:48%;
+}
+</style>
+</head>
+
+<body>
+ <div class="header">
+  <img src="../baidulogo.jpg"/>
+  <ul>
+      <li><a href="http://www.baidu.com">导航链接一</a></li>
+      <li><a href="http://www.baidu.com">导航链接二</a></li>
+      <li><a href="http://www.baidu.com">导航链接三</a></li>
+      <li><a href="http://www.baidu.com">导航链接四</a></li>
+  </ul>
+</div>
+<div class="section">
+<div class="box1">
+<h2>文章一级标题</h2>
+<h3>文章二级标题</h3>
+<p class="author">文章作者&nbsp;文章发表时间</p>
+<p class="p1">这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了.<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了.<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://www.baidu.com">这里有一个链接链接到http://www.baidu.com</a>这是一个很长很长的段落，<strong>这里有个粗体字</strong>，这是一个很长很长的段落。</p>
+<img src="rwphotos/mitre-peak-1546285.jpg"/>
+<p class="p1">这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com" target="_blank">这里有一个链接打开新窗口后链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落.</p>
+</div>
+<div class="box2">
+<h2>另一篇文章一级标题</h2>
+<h3>文章二级标题</h3>
+<p class="author">文章作者&nbsp;文章发表时间</p>
+<p class="p1">这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了.<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了.<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://www.baidu.com">这里有一个链接链接到http://www.baidu.com</a>这是一个很长很长的段落，<strong>这里有个粗体字</strong>，这是一个很长很长的段落。</p>
+<img src="rwphotos/mitre-peak-1546285.jpg"/>
+<ul class="unlist2">
+    <li>列表项目一</li>
+    <li>列表项目二</li>
+    <li>列表项目三</li>
+</ul>
+</div>
+<div class="box3">
+<h2>图片</h2>
+<div class="box31">
+<p>好看的图片</p>
+<img src="rwphotos/mitre-peak-1546285.jpg" />
+</div>
+<div class="box31">
+<p>好看的图片</p>
+<img src="rwphotos/mitre-peak-1546285.jpg" />
+</div>
+<div class="box31">
+<p>好看的图片</p>
+<img src="rwphotos/mitre-peak-1546285.jpg" />
+</div>
+<div class="box31">
+<p>好看的图片</p>
+<img src="rwphotos/mitre-peak-1546285.jpg" />
+</div>
+<div class="box31">
+<p>好看的图片</p>
+<img src="rwphotos/mitre-peak-1546285.jpg" />
+</div>
+<div class="box31">
+<p>好看的图片</p>
+<img src="rwphotos/mitre-peak-1546285.jpg" />
+</div>
+<div class="box31">
+<p>好看的图片</p>
+<img src="rwphotos/mitre-peak-1546285.jpg" />
+</div>
+<div class="box31">
+<p>好看的图片</p>
+<img src="rwphotos/mitre-peak-1546285.jpg" />
+</div>
+</div>
+<div class="box4">
+<h2>最后一篇文章一级标题</h2>
+<h3>文章二级标题</h3>
+<p class="author">文章作者&nbsp;文章发表时间</p>
+<ol>
+    <li>排名1</li>
+    <li>排名2</li>
+    <li>排名3</li>
+</ol>
+<p>下面是一个表格，给表格加了一个border=“1”好让你看出是一个表格</p>
+<table border=1px solid bordercolor="#000000" width="100%">
+       <tr bgcolor="#666666">
+           <th>表头</th>
+           <th>表头</th>
+           <th>表头</th>
+  </tr>
+  <tr>
+           <td>表内容单元格</td>
+           <td>表内容单元格</td>
+           <td><a href="#">操作</a></td>
+      </tr>
+        <tr>
+           <td>表内容单元格</td>
+           <td>表内容单元格</td>
+           <td><a href="#">操作</a></td>
+       </tr>
+       <tr>
+           <td>表内容单元格</td>
+           <td>表内容单元格</td>
+           <td><a href="#">操作</a></td>
+       </tr>
+        <tr>
+           <td>表内容单元格</td>
+           <td>表内容单元格</td>
+           <td><a href="#">操作</a></td>
+       </tr>
+       <tr bgcolor="#CCCCCC">
+           <td>总计</td>
+           <td colspan="2">1000</td>
+       </tr>
+</table>
+</div>
+</div>
+<div class="box5">
+  <h3>这里以后是一个侧栏，这是侧栏的标题</h3>
+  <div class="box51">
+    <span class="left1">请输入邮箱地址：</span><input type="text" value="这是一个文本输入框" name="te1" class="right1" /></br>
+    <p>邮箱地址请按要求格式输入</p>
+  </div>
+  <div class="box52">
+    <span class="left2">请输入密码：</span><input type="password" value="这是一个文本输入框" name="password1" class="right2"/><br/>
+    <span class="left2">请重复输入密码：</span><input type="password" value="这是一个文本输入框" name="password2" class="right2" /><br/>
+    <p>密码为6-16位英文数字</p>
+  </div>
+  <form method="post">
+    <label class="left"> 性别：</label>
+    <span class="right">
+      <label><input type="radio" value="男" name="r1" />男</label>
+      <label><input type="radio" value="女" name="r1" />女</label>
+    </span><br/>
+    <label class="left">城市：</label>
+    <select name="city" class="right">
+      <option value="beijing">北京</option>
+      <option value="shanghai">上海</option>
+      <option value="shenzhen">深圳</option>
+      <option value="wuhan">武汉</option>
+    </select><br/>
+    <label class="left">爱好：</label>
+    <span class="right">
+      <label><input type="checkbox" value="运动" name="c1" />运动</label>
+      <label><input type="checkbox" value="科学" name="c1" />科学</label>
+      <label><input type="checkbox" value="艺术" name="c1" />艺术</label>
+    </span><br/>
+    <label class="left">个人描述：</label>
+    <textarea name="msg" class="right" id="te1">这是一个多行输入框，输入你的个人描述</textarea>
+  </form>
+  <input type="submit" value="确认提交" id="sub53"/>
+</div>
+
+<div class="footer">
+  <p>版权所有©</p>
+</div>
+</body>
+</html>
