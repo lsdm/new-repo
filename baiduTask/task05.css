@@ -1,0 +1,175 @@
+body {
+    background-color:#CCC;
+//字体
+}
+.header {
+    background-color:#0F0F0F;
+    float:left;
+    width:100%;
+    margin-bottom:20px;
+//设置下外边距是为了与section进行外边距合并，在两者之间留出20px的间距。
+}
+.header img {
+    width:120px;
+    height:60px;
+    float:left;
+    padding-left:60px;
+}
+.header ul {
+    float:right;
+}
+.header ul li {
+    float:left;
+    width:6em;
+}
+li a:link {
+    color:#FFF;
+}
+li a:visited {
+    color:#666;
+}
+.section {
+    margin: 0 20px;
+    width: 62%;
+    clear: left;
+    float: left;
+//清除左浮动，在section上方形成了清除区域，使得该div内容区置于header之下。
+}
+.section h3{color:#999;}
+.author {
+    color:#999;
+    font-size:12px;
+}
+p.p1{
+    text-indent:2em;
+}
+.box1 {
+    background-color:#FFF;
+    padding:20px 20px;
+    margin-bottom:20px;
+}
+.box2 {
+    background-color:#FFF;
+    padding:20px 20px;
+    margin-bottom:20px;
+    clear:right;
+}
+.box2 ul {
+    list-style-type:none;
+}
+.box3 {
+    background-color:#FFF;
+    padding:20px 20px;
+    margin-bottom:20px;
+    float:left;
+}
+.box31 img {
+    width:100px;
+    height:120px;
+    margin:10px;
+}
+.box31 {
+    text-align:center;
+    border:1px dashed #999999;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right:20px;
+    display:inline-block;
+}
+
+.box4 {
+    background-color:#FFF;
+    padding:20px 20px;
+    margin-bottom:20px;
+    clear:left;
+}
+.box5 {
+    background-color:#FFF;
+    padding:20px 20px;
+    margin-bottom:20px;
+    position:relative;
+    width:30%;
+    float:left;
+}
+<!--box5中用relative会保留原来的元素位置，定位元素之间会相互影响覆盖。 -->
+<!--若使用absolute定位，那么元素会从普通文档流中删除，相对非static父元素定位，结果就是乱作一团。 -->
+
+.box51 {
+    position:relative;
+    margin-bottom:20px;
+    margin-top:10px;
+}
+.left1 {
+    position:absolute;
+    right:60%;
+    top:auto;
+}
+.right1 {
+    position:absolute;
+    left:40%;
+    top:auto;
+}
+.box51 p {
+    padding-left:40%;
+}
+.box52 {
+    position:relative;
+    margin-bottom:20px;
+    margin-top:20px;
+    margin-right:40px;
+}
+.left2 {
+    position:absolute;
+    right:60%;
+    top:auto;
+}
+.right2 {
+    position:absolute;
+    left:40%;
+    top:auto;
+}
+.box52 p {
+    padding-left:40%;
+}
+
+form {
+    position:relative;
+    height:160px;
+    margin-right:40px;
+}
+.left {
+    position:absolute;
+    right:60%;
+    top:auto;
+}
+.right {
+    position:absolute;
+    left:40%;
+    top:auto;
+}
+#te1 {
+    height:80px;
+    width:50%;
+}
+.box5 h3 {
+    color:#000;
+}
+
+.box5 p {
+    color:gray;
+}
+#sub53 {
+    width:100%;
+    height:40px;
+    background-color:#03F;
+}
+.footer {
+    background-color:#000;
+    color:#FFF;
+    height:60px;
+    clear:left;
+}
+.footer p {
+    padding-top:20px;
+    padding-left:48%;
+}
