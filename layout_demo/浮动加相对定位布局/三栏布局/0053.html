@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三列中间自适应布局</title>
+    <link rel="stylesheet" href="0053.css">
+</head>
+<body>
+<div id="content">
+    <div class="sub">sub & left</div>
+    <div class="extra">extra & right</div>
+    <div class="main">main & center</div>
+</div>
+
+<p>*　注意DOM文档的书写顺序，先写两侧栏，再写主面板，更换后则侧栏会被挤到下一列（圣杯布局和双飞翼布局都会用到）。</p>
+<p>*　这种布局方式比较简单明了，但缺点是渲染时先渲染了侧边栏，而不是比较重要的主面板。</p>
+</body>
+</html>

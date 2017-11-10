@@ -1,0 +1,18 @@
+.container {
+    background: url("../photos/0001.gif") repeat-y;
+    height: 100px;
+    width: 500px;
+    margin: 0 auto;
+}
+.left {
+    float: left;
+    width: 110px;
+}
+.content {
+    float: left;
+    width: 222px;
+}
+.right {
+    float:left;
+    width: 168px;
+}

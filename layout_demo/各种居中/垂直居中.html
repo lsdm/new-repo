@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+    <link rel="stylesheet" href="垂直居中.css">
+</head>
+<body>
+
+<div class="parent1">
+    <div class="child1">
+        <p>第一个：失败</p>
+    </div>
+</div>
+
+<div class="parent2">
+    <div class="child2">
+        <p>父元素一定，子元素为单行内联文本：设置父元素的height等于行高line-height</p>
+        <p>父元素一定，子元素为多行内联文本：设置父元素的display:table-cell或inline-block，再设置vertical-align:middle</p>
+    </div>
+</div>
+
+<div class="parent3">
+    <div class="child3">
+        <p>通用方案: flex布局，给父元素设置{display:flex; align-items:center;}</p>
+    </div>
+</div>
+
+<div class="parent4">
+    <div class="child4">块状元素:设置子元素position:fixed（absolute），然后设置margin:auto;</div>
+</div>
+
+
+</body>
+</html>

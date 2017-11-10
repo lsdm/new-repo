@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双飞翼布局</title>
+    <link rel="stylesheet" href="sfy_layout.css">
+</head>
+<body>
+
+
+<div id="main-wrap" class="column">
+    <div id="main">main</div>
+</div>
+<div class="sub">left</div>
+<div class="extra">right</div>
+
+
+<h2>原理</h2>
+<p>双飞翼布局和圣杯布局的思想有些相似，都利用了浮动和负边距，但双飞翼布局在圣杯布局上做了改进，在main元素上加了一层div, 并设置margin,由于两侧栏的负边距都是相对于main-wrap而言，main的margin值变化便不会影响两个侧栏，因此省掉了对两侧栏设置相对布局的步骤。</p>
+<h2>步骤</h2>
+<ol>
+    <li>三者都设置向左浮动。</li>
+    <li>设置main-wrap宽度为100%，设置两个侧栏的宽度。</li>
+    <li>设置 负边距，sub设置负左边距为100%，extra设置负左边距为负的自身宽度。</li>
+    <li>设置main的margin值给左右两个子面板留出空间。</li>
+</ol>
+<h2>说明</h2>
+<ul>
+    <li>圣杯采用的是padding，而双飞翼采用的margin，解决了圣杯布局main的最小宽度不能小于左侧栏的缺点。</li>
+    <li>双飞翼布局不用设置相对布局，以及对应的left和right值。</li>
+    <li>通过引入相对布局，可以实现三栏布局的各种组合，例如对右侧栏设置position: relative; left: 190px; ,可以实现sub+extra+main的布局。</li>
+</ul>
+</body>
+</html>

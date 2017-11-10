@@ -1,0 +1,9 @@
+.layout {
+    display: flex;
+}
+.layout__main {
+    flex: 1;
+}
+.layout__aside {
+    width: 200px;
+}

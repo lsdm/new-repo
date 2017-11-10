@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <link rel="stylesheet" href="sb_layout.css">
+</head>
+<body>
+
+
+<div id="bd">
+    <div class="main">main</div>
+    <div class="sub">left</div>
+    <div class="extra">right</div>
+</div>
+
+
+<h2>原理</h2>
+<p>主面板设置宽度为100%，主面板与两个侧栏都设置浮动，常见为左浮动，这时两个侧栏会被主面板挤下去。通过负边距将浮动的侧栏拉上来，左侧栏的负边距为100%，刚好是窗口的宽度，因此会从主面板下面的左边跑到与主面板对齐的左边，右侧栏此时浮动在主面板下面的左边，设置负边距为负的自身宽度刚好浮动到主面板对齐的右边。为了避免侧栏遮挡主面板内容，在外层设置左右padding值为左右侧栏的宽度，给侧栏腾出空间，此时主面板的宽度减小。由于侧栏的负margin都是相对主面板的，两个侧栏并不会像我们理想中的停靠在左右两边，而是跟着缩小的主面板一起向中间靠拢。此时使用相对布局，调整两个侧栏到相应的位置。</p>
+<h2>步骤</h2>
+<ol>
+    <li>三者都设置向左浮动。</li>
+    <li>设置main宽度为100%，设置两侧栏的宽度。</li>
+    <li>设置 负边距，sub设置负左边距为100%，extra设置负左边距为负的自身宽度。</li>
+    <li>设置main的padding值给左右两个子面板留出空间。</li>
+    <li>设置两个子面板为相对定位，sub的left值为负的sub宽度，extra的right值为负的extra宽度。</li>
+</ol>
+<h2>说明</h2>
+<ul>
+    <li>DOM元素的书写顺序不得更改。</li>
+    <li>当面板的main内容部分比两边的子面板宽度小的时候，布局就会乱掉。可以通过设置main的min-width属性或使用双飞翼布局避免问题。</li>
+</ul>
+</body>
+</html>

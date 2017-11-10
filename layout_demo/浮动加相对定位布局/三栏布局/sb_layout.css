@@ -1,0 +1,27 @@
+.main {
+    float: left;
+    width: 100%;
+    min-width: 300px;
+    background-color: #e4e703;
+}
+.sub {
+    float: left;
+    width: 190px;
+    margin-left: -100%;
+    position: relative;
+    left: -190px;
+    /*非功能样式*/
+    background-color: #3cffdd;
+}
+.extra {
+    float: left;
+    width: 230px;
+    margin-left: -230px;
+    position: relative;
+    right: -230px;
+    /*非功能样式*/
+    background-color: #dd045e;
+}
+#bd {
+    padding: 0 230px 0 190px;
+}

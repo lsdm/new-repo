@@ -1,0 +1,112 @@
+.parent1 {
+    width:500px;
+    height:500px;
+    border:1px solid black;
+    position: relative;     /*很重要,不能忘*/
+}
+.child1 {
+    background: yellow;
+    width: 300px;
+    height: 200px;
+    margin-left: -150px;
+    margin-top: -100px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.parent2{
+    width:500px;
+    height:500px;
+    border:1px solid black;
+    position: relative;     /*很重要,不能忘*/
+}
+.child2 {
+    background: yellow;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.parent3{
+    width:500px;
+    height:500px;
+    border:1px solid black;
+    display: flex;
+    justify-content: center;    /*使垂直居中*/
+    align-items: center;    /*使水平居中*/
+}
+.child3{
+    background: yellow;
+    width:300px;
+    height:200px;
+}
+
+.parent4{
+    width:500px;
+    height:500px;
+    border:1px solid black;
+    display:table-cell;
+    vertical-align: middle;
+
+}
+.child4{
+    background: yellow;
+    width:300px;
+    /*height:200px;*/
+    margin:auto;
+
+}
+
+.parent5{
+    width:500px;
+    height:500px;
+    border:1px solid black;
+    position: relative;
+}
+.child5{
+    background: yellow;
+    position: absolute;
+    /*width:200px;*/
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.parent6{
+    width:500px;
+    height:500px;
+    border:1px solid black;
+    position: relative;
+}
+.child6{
+    background: yellow;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top:40%;
+    bottom: 40%;
+}
+
+.parent7{
+    width:500px;
+    height:200px;
+    border:1px solid black;
+    text-align: center;
+}
+.parent7:after{
+    content:"";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.child7{
+    background: black;
+    color:white;
+    display: inline-block;
+}

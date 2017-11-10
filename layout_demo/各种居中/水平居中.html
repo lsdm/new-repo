@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平居中</title>
+    <link rel="stylesheet" href="水平居中.css">
+</head>
+<body>
+<div class="parent1">
+    <div class="child1">
+        <p>行内元素；父元素设置text-align：center</p>
+    </div>
+</div>
+
+<div class="child2">
+    <p>定宽块状元素；设置左右margin为auto</p>
+</div>
+
+<div class="parent21">
+    <div class="child21">不定宽块状元素: 设置子元素为display:inline,然后在父元素上设置text-align:center; </div>
+</div>
+
+<div class="child3">
+    <p>第三个；</p>
+</div>
+
+<div class="parent31">
+    <div class="child31">通用方案: flex布局，对父元素设置display:flex;justify-content:center;</div>
+</div>
+<!--以上来自https://segmentfault.com/a/1190000008789039-->
+
+
+<div class="parent4">
+    <div class="child4">
+        <p>第四个；</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+*{
+    /*消除默认内外边距*/
+    margin: 0;
+    padding: 0;
+}
+.sub {
+    position: absolute;
+    top: 0;
+    width: 200px;
+}
+.sub {
+    left: 0;
+    /*非功能样式*/
+    background-color: #3cffdd;
+}
+
+.main {
+    margin: 0 0 0 210px;
+    /*非功能样式*/
+    min-width: 300px;
+    background-color: #e4e703;
+}

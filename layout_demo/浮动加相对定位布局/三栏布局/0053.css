@@ -1,0 +1,18 @@
+.sub{
+    width: 100px;
+    float: left;
+    /*非功能样式*/
+    background-color: #3cffdd;
+}
+.extra{
+    width: 200px;
+    float: right;
+    /*非功能样式*/
+    background-color: #dd045e;
+}
+.main{
+    margin-left: 100px;
+    margin-right: 200px;
+    /*非功能样式*/
+    background-color: #e4e703;
+}

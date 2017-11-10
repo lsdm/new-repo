@@ -1,0 +1,16 @@
+/* 两列定宽布局 */
+.g-bd{
+    width:950px;
+    margin:0 auto;
+    border: 1px solid #fffd0a;
+}
+.g-sd{
+    float:right;
+    width:230px;
+    background-color: #dd1350;
+}
+.g-mn{
+    float:left;
+    width:710px;
+    background-color: #60d6e7;
+}

@@ -1,0 +1,14 @@
+.layout{
+    /*   width: 960px; *//*设置width当浏览器窗口宽度小于960px时，单列布局不会自适应。*/
+    max-width: 960px;
+    margin: 0 auto;
+}
+#header{
+    background-color: #3cffdd;
+}
+#content{
+    background-color: #dd045e;
+}
+#footer{
+    background-color: #e4e703;
+}

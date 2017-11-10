@@ -1,0 +1,58 @@
+.parent1{
+    position:relative;
+    height: 60px;/*需要定height或者有其他内容撑起父元素*/
+    /*非功能样式*/
+    border: 1px solid #60d6e7;
+
+}
+.child1{
+    position:absolute;
+    top:50%;
+    transform:translate(0,-50%);
+}
+
+
+.parent2{
+    display:table-cell;/*或 display:inline-block;*/
+    vertical-align: middle;
+    height:20px;/*相应的设置 line-height:20px;*/
+    /*非功能样式*/
+    border: 1px dashed #ff1370;
+    margin: 10px 0;
+}
+.child2{
+    /*非功能样式*/
+    border: 1px solid #60d6e7;
+    margin: 10px 0;
+}
+
+
+.parent3{
+    display:flex;
+    align-items:center;
+    /*非功能样式*/
+    border: 1px solid #60d6e7;
+    margin: 10px 0;
+}
+.child3{
+    /*非功能样式*/
+    border: 1px solid #ff1370;
+    margin: 10px 0;
+}
+.child3>p{
+    /*非功能样式*/
+    border: 1px solid #ff00ff;
+}
+
+
+.parent4{
+    /*非功能样式*/
+    border: 1px solid #ff1370;
+    margin: 10px 0;
+}
+.child4{
+    position:absolute;
+    margin:auto;
+    /*非功能样式*/
+    border: 1px solid #60d6e7;
+}

@@ -1,0 +1,46 @@
+/* 三列右侧自适应布局 */
+.g-bd3{
+    margin:0 0 10px;
+}
+.g-sd31,.g-sd32{
+    position:relative;
+    float:left;
+    width:230px;
+    background-color: #ff1370;
+}
+.g-sd31{
+    width:190px;
+    margin-right:10px;
+}
+.g-mn3{
+    float:right;
+    width:100%;
+    margin-left:-430px;
+    background-color: #47dd55;
+}
+.g-mn3c{
+    margin-left:440px;
+}
+
+/* 三列左侧自适应布局 */
+.g-bd4{
+    margin:0 0 10px;
+}
+.g-sd41,.g-sd42{
+    position:relative;
+    float:right;
+    width:190px;
+    background-color: #ff1370;
+}
+.g-sd41{
+    width:230px;
+    margin-left:10px;
+}
+.g-mn4{
+    float:left;width:100%;
+    margin-right:-430px;
+    background-color: #47dd55;
+}
+.g-mn4c{
+    margin-right:440px;
+}

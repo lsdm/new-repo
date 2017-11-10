@@ -1,0 +1,69 @@
+.parent1{
+    text-align: center;
+    /*非功能样式*/
+    border: 1px solid #60d6e7;
+}
+
+.child2{
+    width: 300px;
+    margin: 0 auto;
+    /*非功能样式*/
+    border: 1px dashed #ff1370;
+}
+
+.parent21{
+    text-align: center;
+    /*非功能样式*/
+    margin: 0 100px;
+    border: 1px solid #dd045e;
+}
+.child21{
+    display: inline;
+    /*非功能样式*/
+    border: 1px solid #e4e703;
+}
+
+.child3{
+    display: table;/*只不过将block换为了table而已*/
+    margin: 0 auto;
+    /*非功能样式*/
+    border: 1px solid #60d6e7;
+}
+.child3>p{
+    border: 1px solid #e4e703;
+}
+.parent31{
+    display: flex;
+    justify-content: center;
+    /*非功能样式*/
+    border: 1px solid #60d6e7;
+}
+.child31{
+    border: 1px solid #e4e703;
+}
+/*
+上下来源不同
+*/
+
+
+
+
+
+.parent4{
+    position:relative;
+    /*非功能样式*/
+    margin: 10px 0;
+    border: 1px dashed #ff1370;
+}
+/*用于实现父元素包裹绝对定位元素?????????????没有成功；事实上纯css也无法做到*/
+.parent4::after{
+    content: " ";
+    display: block;
+}
+/*或者实用margin-left的负值为盒子宽度的一半也可以实现，不过这样就必须知道盒子的宽度，但兼容性好*/
+.child4{
+    position: absolute;
+    border: 1px solid #e4e703;
+    left:50%;
+    transform: translate(-50%);
+}

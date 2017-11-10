@@ -1,0 +1,33 @@
+#content1{
+    /*非功能样式*/
+    margin: 10px auto;
+}
+#content1>.sub{
+    width: 100px;
+    float: left;
+    /*非功能样式*/
+    background-color: #3cffdd;
+}
+#content1>.main{
+    margin-left: 110px;
+
+    /*非功能样式*/
+    background-color: #e4e703;
+}
+
+
+#content2{
+    /*非功能样式*/
+    margin: 10px auto;
+}
+#content2>.extra{
+    width: 200px;
+    float: right;
+    /*非功能样式*/
+    background-color: #dd045e;
+}
+#content2>.main{
+    margin-right: 210px;
+    /*非功能样式*/
+    background-color: #e4e703;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平垂直居中</title>
+    <link rel="stylesheet" href="水平垂直居中.css">
+</head>
+<body>
+<div class="parent1">
+    <div class="child1">
+        <p>成功；适用于宽高固定。</p>
+        <p>注释：子元素设置position: absolute(父元素记得设置: relative), 然后top和left设置50%, 50%, 再设置margin-left=宽/2, margin-top:宽/2</p>
+    </div>
+</div>
+
+<div class="parent2">
+    <div class="child2">
+        <p>只适用: 固定宽高; 如果宽高随意,想靠内部撑开的话, 会占满整个父div </p>
+        <p>注释：依然是利用position；子div的上下左右都设置成0，然后margin设置auto。关键是要设置position：子absolute，父relative。</p>
+    </div>
+</div>
+
+<div class="parent3">
+    <div class="child3">
+        <p>适用: 不论是否固定宽高都可用. 问题在于兼容性. ie9及以下不支持</p>
+        <p>设置父级flex属性: display:flex; justify-content:center; align-items: center;这种方法在子级div有多个时也可以实现居中----具体看flex属性设置</p>
+    </div>
+</div>
+<div class="parent4">
+    <div class="child4">
+        <p>适用: 要设宽度, 否则会使得宽度为父级div的宽度</p>
+        <p>父级元素设置display:table-cell ，然后vertical-align：middle。这种方法可以设置垂直居中. 这时候只要在子元素里设置margin:auto即可实现水平居中但是这种方法好像会使父元素的居中无效。</p>
+    </div>
+</div>
+<div class="parent5">
+    <div class="child5">
+        <p>适用: 可不指定宽高</p>
+        <p>使用transform居中. 设置父级position:relative; 子级position:absolute. 然后top: 50%; left:50%; transform:translate(-50%,-50%)</p>
+    </div>
+</div>
+<div class="parent6">
+    <div class="child6">
+        <p></p>
+        <p>使用display:inline-block加伪元素</p>
+    </div>
+</div>
+<div class="parent7">
+    <div class="child7">
+        <p>实际实现可能有点问题；适用: 指定宽高百分比;</p>
+        <p>保证left和right的百分数一样就可以实现水平居中，保证top和bottom的百分数一样就可以实现垂直居中。但是这种方法不能由内部元素自动调节div的宽高，而是通过父元素大小控制的</p>
+    </div>
+</div>
+</body>
+</html>
