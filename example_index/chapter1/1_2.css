@@ -1,0 +1,31 @@
+span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px;
+}
+#redSpan{
+    background-color: red;
+    border-color: red;
+}
+#greenSpan{
+    background-color: green;
+    border-color: green;
+}
+#blackSpan{
+    background-color: black;
+    border-color: black;
+}
+#uList{
+    margin: 20px auto;
+}
+li{
+    color: #ffffff;
+    display: inline-block;
+    border: 1px white solid;
+    padding: 3px 30px;
+    background-color: green;
+}
+body{
+    background-color: #84b781;
+}

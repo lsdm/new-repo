@@ -1,0 +1,12 @@
+#div1{
+    text-align: center;
+}
+input{
+    margin:10px 10px;
+}
+#changeBox{
+    margin: 40px auto;
+    width:100px;
+    height:100px;
+    background-color: mediumspringgreen;
+}

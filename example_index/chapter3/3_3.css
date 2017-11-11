@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#clock{
+    width: 260px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#clock input{
+    width: 40px;
+    height: 20px;
+    margin: 5px;
+    border: 2px dotted #d6dbdc;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+#countdown{
+    width: 260px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#countdown input{
+    width: 40px;
+    height: 20px;
+    margin: 5px;
+    border: 2px dotted #d6dbdc;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+#countdown button{
+    width: 80%;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+label{
+    margin: 20px auto 20px 500px;
+}
+label input{
+    margin-left: 30px;
+}
+button#confirm{
+    margin: 20px auto 20px 595px;
+}
+div{
+    width: 180px;
+    height: 180px;
+    color: white;
+    background-color: black;
+    margin: 10px auto;
+    padding: 10px 10px;
+}
+

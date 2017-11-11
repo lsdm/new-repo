@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding: 0;
+}
+div#largediv{
+    margin: 10px auto;
+    width: 335px;
+    background-color: #f3edff;
+}
+div#subscribe{
+    margin: 10px;
+    width: 315px;
+
+    background-color: #d6dbdc;
+    color: black;
+}
+.month{
+    display: inline-block;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width:60px;
+    height: 60px;
+    margin: 10px;
+}
+#highlight{
+    background-color: white;
+    color: #dd1350;
+}

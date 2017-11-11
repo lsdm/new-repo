@@ -1,0 +1,16 @@
+p{
+    text-align: center;
+}
+input{
+    width: 260px;
+}
+div.color{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: black;
+}
+div#box{
+    text-align: center;
+}
