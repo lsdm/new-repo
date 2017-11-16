@@ -1,0 +1,40 @@
+* {
+    margin:0;
+    padding:0;
+}
+li{
+    list-style:none;
+    width:100px;
+    height:30px;
+    font-size:14px;
+    text-align:left;
+    line-height:30px;
+    border:1px solid #000;
+    position:relative;
+}
+.box>li{
+    float:left;
+    position:relative;
+}
+.son{
+    position:absolute;
+    top:30px;
+    left:-1px;
+    width:306px;
+}
+.son>li{
+    float:left;
+}
+/*浮动后，二级菜单就在一行了*/
+.graSon{
+    position:absolute;
+    top:30px;
+    left:-1px;
+}
+.son,.graSon{
+    display:none;
+}
+.active{
+    display:block;
+    background:#FF0;
+}

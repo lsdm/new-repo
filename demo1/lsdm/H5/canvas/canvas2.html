@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas2</title>
+    <style>
+        #multiFigure{
+            width: 800px;
+            height: 500px;
+            border: 1px solid #dd045e;
+        }
+        #curve{
+            width: 800px;
+            height: 200px;
+            border: 1px solid #dd045e;
+        }
+    </style>
+    <script src="canvas2.js"></script>
+</head>
+<body>
+<h2>&lt;canvas&gt;实现规则多边形</h2>
+<h2>非零绕数原则</h2>
+<p>六边形内有正方形；它们相互重叠；这时画布需要确定哪些区域在路径里面；哪些在路径外面；由于两者绘制的方向不同；对穿过（由检测点发出的）射线的路径进行枚举；计数器为0，则不在路径内。</p>
+<canvas id="multiFigure"></canvas>
+
+<p>绘制曲线</p>
+<canvas id="curve"></canvas>
+</body>
+</html>

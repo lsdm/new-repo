@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*@font-face {
+    font-family: <YourWebFontName>;
+    src: <source> [<format>][,<source> [<format>]]*;
+    [font-weight: <weight>];
+    [font-style: <style>];
+}*/
+@font-face {
+    font-family: "myWebFont";
+    src: local('font/cheveuxdange-webfont.woff'),local('font/cheveuxdange-webfont.ttf'),url(http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf); /* IE9 Compat Modes */
+}
+/*圆角边框*/
+.radius{
+    width: 700px;
+    margin: 10px auto;
+
+    border: 10px solid #e4e703;
+    border-radius: 10px;
+}
+/*边框图像border-image: source slice width outset repeat;*/
+.bimg{
+    width: 700px;
+    margin: 20px auto;
+    border: 1px dashed #050505;
+}
+.round{
+    border:15px solid transparent;
+    width:250px;
+    padding:10px 20px;
+    -webkit-border-image:url(images/bg1.png) 30 30 round; /* Safari 5 and older */
+    -o-border-image:url(images/bg1.png) 30 30 round; /* Opera */
+    border-image:url(images/bg1.png) 30 30 round;
+}
+.stretch{
+    border:15px solid transparent;
+    width:250px;
+    padding:10px 20px;
+    -webkit-border-image:url(images/bg1.png) 30 30 stretch; /* Safari 5 and older */
+    -o-border-image:url(images/bg1.png) 30 30 stretch; /* Opera */
+    border-image:url(images/bg1.png) 30 30 stretch;
+}
+/*文本效果*/
+/*盒阴影box-shadow: h-shadow v-shadow blur spread color inset;*/
+.shadow{
+    width: 700px;
+    margin: 10px auto;
+
+    background-color: #e4e703;
+    box-shadow: 10px 5px 3px 4px #d6dbdc;
+}
+.shadow>p:nth-child(1){
+    text-shadow: 5px 5px 5px #FF0000;
+}
+.shadow>p:nth-child(2){
+    white-space: nowrap;
+    width: 60px;
+    overflow: hidden;
+    border: 1px dashed #050505;
+    text-overflow: ellipsis;
+}
+.shadow>p:nth-child(3){
+    white-space: nowrap;/*不换行*/
+    width: 60px;
+    overflow: hidden;
+    border: 1px dashed #050505;
+    text-overflow: clip;
+}
+.shadow>p:nth-child(4){
+    width: 60px;
+    word-break:break-all;
+    border: 1px dashed #050505;
+}
+
+/*渐变效果*/
+/*线性渐变background: linear-gradient(direction, color-stop1, color-stop2, ...);*/
+.linear{
+    height: 60px;
+    width: 600px;
+    margin: 10px auto;
+    border: 5px solid #dd045e;
+
+    background: -webkit-linear-gradient(left top, red, orange, yellow, green, blue, indigo, violet); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom right, red, orange, yellow, green, blue, indigo, violet); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom right, red, orange, yellow, green, blue, indigo, violet); /* Firefox 3.6 - 15 */
+    background: linear-gradient(bottom right, red, orange, yellow, green, blue, indigo, violet); /* 标准的语法（必须放在最后） */
+}
+/*径向渐变background: radial-gradient(center, shape size, start-color, ..., last-color);  */
+.radial{
+    height: 150px;
+    width: 200px;
+    margin: 10px auto;
+    border: 5px solid #dd045e;
+
+    background: -webkit-repeating-radial-gradient(red, yellow 10%, green 15%); /* Safari 5.1 - 6.0 */
+    background: -o-repeating-radial-gradient(red, yellow 10%, green 15%); /* Opera 11.6 - 12.0 */
+    background: -moz-repeating-radial-gradient(red, yellow 10%, green 15%); /* Firefox 3.6 - 15 */
+    background: repeating-radial-gradient(red, yellow 10%, green 15%); /* 标准的语法（必须放在最后） */
+}
+
+/*背景效果*/
+.bgimg{
+    width: 1024px;
+    height: 906px;
+    margin: 10px auto;
+    border: 5px solid #dd045e;
+
+    background-image: url(images/flowerbg1.jpg), url(images/flowerbg2.jpg);
+    background-size: 80px 60px;
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    background-origin:padding-box;
+}
+
+/*字体效果:未实现*/
+.myFont{
+    width: 600px;
+    height: 100px;
+    margin: 10px auto;
+    border: 5px solid #dd045e;
+
+    font-family: "myWebFont";
+}
+
+/*2d转换效果*/
+.ts1{
+    width:200px;
+    height:100px;
+    margin: 10px auto;
+    background-color:red;
+    -ms-transform: translate(-80px,-40px); /* IE 9 */
+    -webkit-transform: translate(-80px,-40px); /* Safari and Chrome */
+    transform: translate(-80px,-40px);
+}
+.ts2{
+    width:200px;
+    height:100px;
+    margin: 10px auto;
+    background-color:orange;
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Safari and Chrome */
+    transform: rotate(30deg);
+}
+.ts3{
+    width:200px;
+    height:100px;
+    margin: 10px auto;
+    background-color: yellow;
+    -ms-transform:scale(0.5,0.4); /* IE 9 */
+    -webkit-transform: scale(0.5,0.4); /* Safari */
+    transform: scale(0.5,0.4); /* 标准语法 */
+}
+.ts4{
+    width:200px;
+    height:100px;
+    margin: 10px auto;
+    background-color:green;
+    transform: skew(30deg,20deg);
+    -ms-transform: skew(30deg,20deg); /* IE 9 */
+    -webkit-transform: skew(30deg,20deg); /* Safari and Chrome */
+}
+.ts5{
+    width:200px;
+    height:100px;
+    margin: 10px auto;
+    background-color:blue;
+    transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+    -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */
+    -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* Safari and Chrome */
+}
+/*过渡效果*/
+.tsi{
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    background: purple;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s linear 5s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 2s, transform 2s linear 5s;
+}
+.tsi:hover {
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+/*动画效果*/
+@keyframes myfirst
+{
+    0%   {background:red; left:0; top:0;}
+    25%  {background:yellow; left:200px; top:0;}
+    50%  {background:blue; left:200px; top:200px;}
+    75%  {background:green; left:0; top:200px;}
+    100% {background:red; left:0; top:0;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    0%   {background:red; left:0; top:0;}
+    25%  {background:yellow; left:200px; top:0;}
+    50%  {background:blue; left:200px; top:200px;}
+    75%  {background:green; left:0; top:200px;}
+    100% {background:red; left:0; top:0;}
+}
+.ani{
+    width:100px;
+    height:100px;
+    margin: 10px auto;
+    background:red;
+    position:relative;
+    animation:myfirst 5s;
+    -webkit-animation:myfirst 5s; /* Safari and Chrome */
+}
+/*多列效果*/
+.col{
+    -moz-column-count:4; /* Firefox */
+    -webkit-column-count:4; /* Safari and Chrome */
+    column-count:4;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+    -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+    -moz-column-rule-color: lightblue; /* Firefox */
+    column-rule-color: lightblue;
+}
+.col>h2{
+    column-span: all;
+}
+/*用户界面*/
+.upage{
+    border:2px solid #e4e703;
+    padding:10px 40px;
+    width:300px;
+
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    outline:2px solid red;
+    outline-offset:15px;
+    resize:both;
+    overflow:auto;
+}
+/**/
+/**/
+/**/

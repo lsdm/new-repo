@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*
+容器样式；
+相对定位以实现子元素的绝对定位
+容器只显示一张图片；溢出隐藏。
+*/
+#rot{
+    width: 320px;
+    height: 480px;
+    position: relative;
+    border: 1px solid #e4e703;
+    margin: 10px auto;
+    overflow: hidden;
+}
+/*
+图片样式
+由a标签包裹必要时实现跳转；
+*/
+#rot>a{
+    width: 320px;
+    position: absolute;
+}
+#rot>a>img{
+    width: 100%;
+}
+#rot>a:nth-child(5){
+    z-index: 1;
+}
+#rot>a:nth-child(4){
+    z-index: 2;
+}
+#rot>a:nth-child(3){
+    z-index: 3;
+}
+#rot>a:nth-child(2){
+    z-index: 4;
+}
+#rot>a:nth-child(1){
+    z-index: 5;
+}
+/*
+向前向后按钮样式
+绝对定位--两边对称
+透明效果
+*/
+#rot button{
+    width: 30px;
+    height: 20px;
+    border: 1px solid #050505;
+    position: absolute;
+    z-index: 100;
+    top: 225px;
+    color: #050505;
+    background-color: #d6dbdc;
+    opacity: 0.5;
+}
+#rot .pre{
+    left: 10px;
+}
+#rot .next{
+    right: 10px;
+}
+/*
+徐庶li元素样式
+ul绝对定位--水平居中
+*/
+#rot>ul{
+    position: absolute;
+    z-index: 100;
+    bottom: 10px;
+    left: 105px;
+}
+#rot>ul>li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #dd045e;
+    text-align: center;
+}

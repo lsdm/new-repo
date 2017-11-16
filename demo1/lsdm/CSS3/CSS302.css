@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*媒体查询*/
+@media screen and (min-width:1200px){
+    header{
+        width: 800px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    nav{
+        width: 800px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+    nav li{
+        display: inline-block;
+        margin: 20px;
+    }
+
+    #main{
+        width: 790px;
+        padding: 0 5px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+    #main>section{
+        display: inline-block;
+        width: 200px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main>article{
+        display: inline-block;
+        width: 338px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main>aside{
+        display: inline-block;
+        width: 200px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main p{
+        margin: 5px 0;
+    }
+
+    footer{
+        width: 800px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    header{
+        width: 800px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    nav{
+        width: 800px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+    nav li{
+        display: inline-block;
+        margin: 20px;
+    }
+
+    #main{
+        width: 790px;
+        padding: 0 5px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+    #main>section{
+        display: inline-block;
+        width: 200px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main>article{
+        display: inline-block;
+        width: 338px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main>aside{
+        display: inline-block;
+        width: 200px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main p{
+        margin: 5px 0;
+    }
+
+    footer{
+        width: 800px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    header{
+        width: 800px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    nav{
+        width: 800px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+    nav li{
+        display: inline-block;
+        margin: 20px;
+    }
+
+    #main{
+        width: 790px;
+        padding: 0 5px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+    #main>section{
+        float: left;
+        width: 200px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main>article{
+        float: left;
+        width: 380px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main>aside{
+        float: left;
+        width: 200px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main p{
+        margin: 5px 0;
+    }
+
+    footer{
+        width: 800px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    header{
+        width: 600px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    nav{
+        width: 600px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+    nav li{
+        display: inline-block;
+        margin: 20px;
+    }
+
+    #main{
+        width: 590px;
+        padding: 0 5px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+    #main>section{
+        float: left;
+        width: 150px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main>article{
+        float: left;
+        width: 260px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main>aside{
+        float: left;
+        width: 150px;
+        border: 2px solid #60d6e7;
+        margin: 10px 5px;
+    }
+    #main p{
+        margin: 5px 0;
+    }
+
+    footer{
+        width: 600px;
+        border: 1px solid #60d6e7;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 479px) {
+
+}
