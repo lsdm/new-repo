@@ -36,7 +36,7 @@ function threeFun() {
     //利用jsonp进行跨域；myFun是内联js中的回调函数。
     var eleBody = document.getElementsByTagName("body");
     var eleScript = document.createElement("script");
-    eleScript.src = "http://v.juhe.cn/weather/citys?dtype=json&key=511c09ccd4081e2f7d769f6f0bc7d73a&callback=myFun";
+    eleScript.src = "https://v.juhe.cn/weather/citys?dtype=json&key=511c09ccd4081e2f7d769f6f0bc7d73a&callback=myFun";
     document.getElementsByTagName("head")[0].appendChild(eleScript);
 }
 EventUtil.addHandler(window,"load",threeFun);
