@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三级联动</title>
+    <link rel="stylesheet" href="three_linkage01.css">
+    <script src="three_linkage01.js"></script>
+</head>
+<body>
+<h1>省市区三级联动组件</h1>
+
+<form id="pos">
+    <label for="pos_pro">
+        <span>省:</span>
+        <select name="" id="pos_pro">
+            <option value="省份" selected>省份</option>
+        </select>
+    </label>
+
+    <label for="pos_city">
+        <span>市:</span>
+        <select name="" id="pos_city">
+            <option value="地级市" selected>地级市</option>
+        </select>
+    </label>
+
+    <label for="pos_dis">
+        <span>县区:</span>
+        <select name="" id="pos_dis">
+            <option value="县/区" selected>县/区</option>
+        </select>
+    </label>
+</form>
+<script>
+    //注册回调函数处理获取的数据；对跨域获取的数据进行处理；按省市区进行分类。
+    //遍历数据；形成三级联动的对象的数组myData；
+    var myData = [];
+    function myFun(data) {
+        //检查获取的数据；有错就报错；无错再处理。
+        if(data["error_code"] !== 0){
+            console.log("聚合数据获取出错:" + data["error_code"] + data["reason"]);
+        }else {
+            var newData = [];
+            var lastId = 0;
+
+            //将数据分割成以省为单位的数组
+            data["result"].map(function (dirObj) {
+                var cid = dirObj["id"];
+                if (parseInt(cid) > 1){
+                    if (dirObj["province"] !== data["result"][parseInt(cid) - 2]["province"]){
+                        newData.push(data["result"].slice(lastId,parseInt(cid)-1));
+                        lastId = parseInt(cid) - 1;
+                    }
+                }
+            });
+
+            //对分割成数组的newdata进行处理
+            myData = newData.map(function (province) {
+                var pro = province[0]["province"];
+                //提取出市一级;
+                var province1 =[];
+                var city1 = [];
+                province.map(function (obj) {
+                    if (obj.city !== obj.district){
+                        if (province1.indexOf(obj.city) === -1){
+                            province1.push(obj.city);
+                        }
+                    }
+                });
+                //提取出各个市的区县一级
+                for(var i = 0;i < province1.length;i++){
+                    var dists = [];
+                    province.map(function (obj) {
+                        if (obj.city === province1[i]){
+                            dists.push(obj.district);
+                        }
+                    });
+                    city1.push(dists);
+                }
+                return {
+                    "province": pro,
+                    "city": province1,
+                    "district": city1
+                }
+            });
+
+            //获取的数据完成后进行填充。
+            if (myData.length !== 0){
+                //进行数据填充
+                var pos_pro = document.getElementById("pos_pro");
+                var pos_city = document.getElementById("pos_city");
+                var pos_dis = document.getElementById("pos_dis");
+
+                //遍历数据生成各省直辖市的option添加appendchild到第一个label中；
+                var eleBox1 = document.createDocumentFragment();
+                myData.map(function (myPro) {
+                    var eleOpt = document.createElement("option");
+                    eleOpt.innerText = myPro["province"];
+                    eleBox1.appendChild(eleOpt);
+                });
+                pos_pro.appendChild(eleBox1);
+
+                // 点击选择省直辖市后进行判断是否是默认值；否则遍历找到该省，生成该省的市的option添加到第二个label中；
+                function cliPro(event) {
+                    pos_city.innerHTML = "";
+                    pos_dis.innerHTML = "";
+                    var eleBox2 = document.createDocumentFragment();
+                    var eleOpt = document.createElement("option");
+                    eleOpt.innerText = "地级市";
+                    eleBox2.appendChild(eleOpt);
+                    myData.map(function (myPro) {
+                        if (myPro["province"] === event.target.value){
+                            myPro["city"].map(function (myCity) {
+                                var eleOpt = document.createElement("option");
+                                eleOpt.innerText = myCity;
+                                eleBox2.appendChild(eleOpt);
+                            })
+                        }
+                    });
+                    pos_city.appendChild(eleBox2);
+                }
+                EventUtil.addHandler(pos_pro,"click",cliPro);
+                // 点击选择地级市后遍历找到该地级市，生成该省该地级市的县区的option添加到第三个label中；
+                function cliDist() {
+                    pos_dis.innerHTML = "";
+                    var eleBox3 = document.createDocumentFragment();
+                    var eleOpt = document.createElement("option");
+                    eleOpt.innerText = "县/区";
+                    eleBox3.appendChild(eleOpt);
+                    myData.map(function (myPro) {
+                        if (myPro["province"] === pos_pro.value){
+                            myPro["district"][myPro["city"].indexOf(pos_city.value)].map(function (myDist) {
+                                if(myDist !== pos_city.value){
+                                    var eleOpt = document.createElement("option");
+                                    eleOpt.innerText = myDist;
+                                    eleBox3.appendChild(eleOpt);
+                                }
+                            })
+                        }
+                    });
+                    pos_dis.appendChild(eleBox3);
+                }
+                EventUtil.addHandler(pos_city,"click",cliDist);
+            }
+        }
+    }
+</script>
+</body>
+</html>
